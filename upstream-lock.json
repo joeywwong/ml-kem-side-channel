@@ -1,0 +1,136 @@
+{
+  "sources": {
+    "PQClean/PQClean": "0586a824fc0d49df0b6b6e9179d8d15d06d0974f",
+    "usnistgov/ACVP-Server": "975de31eb83d87039ec88934fdc47d8c312b892d"
+  },
+  "files": {
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/LICENSE": {
+      "sha256": "5d7798eec4d8c8ef0a72dfe805ec54dfd7b212d3928bf9695fda4095d22829ab",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/LICENSE"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/api.h": {
+      "sha256": "a78bfd7398037991b9b1a7aaeabba9fc7d1e06968fd57080c2e0e2d766565668",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/api.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/cbd.c": {
+      "sha256": "9f176633138e1a5eaa1e649f6d0f4067adb7403019498dd4f75372da2ff1813d",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/cbd.c"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/cbd.h": {
+      "sha256": "a4e9375d91ae9cff8b925e34bc4fe5ef69aac0157de022b563d21861b03e1e4b",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/cbd.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/indcpa.c": {
+      "sha256": "4148b278c6a8e2274080e4bfbe04abed3753c0315e93abe6411c6e53cf3f3d00",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/indcpa.c"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/indcpa.h": {
+      "sha256": "c92cd8ce57a8181bdbcbf119a390dfbd22d9632094b8f5f66debcfa824925998",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/indcpa.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/kem.c": {
+      "sha256": "b13ab4f5185b97af5c38c740947431ca4b48ccd3f55de13c6091cca499f7df5e",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/kem.c"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/kem.h": {
+      "sha256": "116beddab96493d78731fe29a590cd62b8b49c0cfaabacbe9d06744bb7ec1822",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/kem.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/ntt.c": {
+      "sha256": "835f1a855990217c4ee0b910631a0d6d29221da936817089172f5250ed0147ea",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/ntt.c"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/ntt.h": {
+      "sha256": "b3920d95d1ec5e4151fffee4a5af83c7707655bae7095dcfd247556ee452eb3f",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/ntt.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/params.h": {
+      "sha256": "db7c409f864ebf0864051516e18515081b3fbc9fa932b2a53c3d10b3287610f4",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/params.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/poly.c": {
+      "sha256": "72677e3e193974d98341d866f079e64edc1e1a149f3665d5654487ceee409db6",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/poly.c"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/poly.h": {
+      "sha256": "068bda2df62e1268d90391d3434713984827648661a22d02adc4b371d0b0ac15",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/poly.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/polyvec.c": {
+      "sha256": "20d4327a1c789b6a8ade17696f722daa0095aa745f6c68371b194d98e569ffcd",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/polyvec.c"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/polyvec.h": {
+      "sha256": "f4bbfccc8d00122092a8d04fe15f6c5a92b3cb5393da609a2d6aa4697b2cca3a",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/polyvec.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/reduce.c": {
+      "sha256": "b3747f6e4175037781b16f8f299b004412512636029ac1b6ee8f8e9ed0185c71",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/reduce.c"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/reduce.h": {
+      "sha256": "264f6e3c6d96ff8d2ad4bf97b9642e318ba6c11f90bcf3744b6fb335c38b89c0",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/reduce.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/symmetric-shake.c": {
+      "sha256": "98d72d85727e0498b5ed86580929ebcfc7a12b018b3aa4d56a78c2418556b2bf",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/symmetric-shake.c"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/symmetric.h": {
+      "sha256": "360b704d61c855b8fa036362c49d5370203811e574161b593419161e070706ef",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/symmetric.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/verify.c": {
+      "sha256": "bbd75ab6e89d8e472a1c9d0adff9f6619f0ecfbfb26736b11e339c20a14f38cb",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/verify.c"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/clean/verify.h": {
+      "sha256": "09c221adfa8d9870ffeeae208775b5042d2934685a39efd1b70d80876e931c9b",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/clean/verify.h"
+    },
+    "third_party/pqclean/crypto_kem/ml-kem-512/META.yml": {
+      "sha256": "1d52470c24e022f51eee2ce3c272bb6370692558e3d43ca448f2332ea8d6526f",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/crypto_kem/ml-kem-512/META.yml"
+    },
+    "third_party/pqclean/common/fips202.c": {
+      "sha256": "4871baddebf2d4771d86b5088719123e2e43addce1a3c0eca75b4d18970ffc1f",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/common/fips202.c"
+    },
+    "third_party/pqclean/common/fips202.h": {
+      "sha256": "bf99a54bc1988380418054a18bd5a14d059770e70c1aac23b6d9c914539168e0",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/common/fips202.h"
+    },
+    "third_party/pqclean/common/compat.h": {
+      "sha256": "af180f65d6c77f4ee2745d12e2e9bf4d3917228e8a9bbd28dc351734f72840ff",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/common/compat.h"
+    },
+    "third_party/pqclean/common/randombytes.c": {
+      "sha256": "892d5d9ea9f5623f863f170c829827e936bb96609fb11d7e53a3d8413f07f8c1",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/common/randombytes.c"
+    },
+    "third_party/pqclean/common/randombytes.h": {
+      "sha256": "7ae401d4d5eeb41bfa738d1281d57da3f78f915ca94388d89f4f33cbe6a3fe1e",
+      "url": "https://raw.githubusercontent.com/PQClean/PQClean/0586a824fc0d49df0b6b6e9179d8d15d06d0974f/common/randombytes.h"
+    },
+    "third_party/acvp/ML-KEM-keyGen-FIPS203/prompt.json": {
+      "sha256": "3f9ce34f6c836c77958bad2729e837c3b213f44ac36c3065976e7acca6389523",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-keyGen-FIPS203/prompt.json"
+    },
+    "third_party/acvp/ML-KEM-keyGen-FIPS203/expectedResults.json": {
+      "sha256": "a253d0ad91c95ebea5b409673defef0aa49d65d4ed72286399e2e798ddf073a4",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-keyGen-FIPS203/expectedResults.json"
+    },
+    "third_party/acvp/ML-KEM-encapDecap-FIPS203/prompt.json": {
+      "sha256": "998e22dfb12efb14ce9fdff911ca634b13612819a1806f25da69adba7e16db91",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/prompt.json"
+    },
+    "third_party/acvp/ML-KEM-encapDecap-FIPS203/expectedResults.json": {
+      "sha256": "9089ec6ff2424da9f2782b89b2f831a329a3e28d6e5e24b802b78ff36ac61cdf",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/gen-val/json-files/ML-KEM-encapDecap-FIPS203/expectedResults.json"
+    },
+    "third_party/acvp/UPSTREAM_README.md": {
+      "sha256": "d5a569884ee83bd1c4737042d0a2cc7d68c6950690f75a73ef14f505a9aa3555",
+      "url": "https://raw.githubusercontent.com/usnistgov/ACVP-Server/975de31eb83d87039ec88934fdc47d8c312b892d/README.md"
+    }
+  }
+}

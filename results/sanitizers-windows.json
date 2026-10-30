@@ -1,0 +1,12 @@
+{
+  "address": {
+    "status": "NOT RUN",
+    "reason": "sanitizer compiler/runtime probe unavailable",
+    "diagnostic": "C:/Strawberry/c/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lasan: No such file or directory\r\ncollect2.exe: error: ld returned 1 exit status\n"
+  },
+  "undefined": {
+    "status": "NOT RUN",
+    "reason": "sanitizer compiler/runtime probe unavailable",
+    "diagnostic": "C:/Strawberry/c/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lubsan: No such file or directory\r\ncollect2.exe: error: ld returned 1 exit status\n"
+  }
+}

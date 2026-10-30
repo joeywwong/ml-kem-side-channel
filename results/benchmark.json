@@ -1,0 +1,195 @@
+{
+  "status": "PASS",
+  "kind": "HOST TIMING",
+  "flags": [
+    "-std=c99",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fno-lto"
+  ],
+  "seed": 20261030,
+  "compiler": "gcc (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r8) 13.2.0",
+  "executable_sha256": "253465abfd10fe16451666116d472114e2e90fd91f3d59db4b6cae4c8d52ce5d",
+  "measurement": "wall time, 10 million calls per batch; alternating order; first batch per variant excluded",
+  "scope": "precomputed input/share arrays; excludes entropy, splitting, recombination; loop/call/checksum costs included; no MCU extrapolation",
+  "summaries": {
+    "baseline": {
+      "n": 9,
+      "min_ns": 1.79694,
+      "median_ns": 1.87397,
+      "max_ns": 2.67202,
+      "stdev_ns": 0.2849975173576078
+    },
+    "masked": {
+      "n": 9,
+      "min_ns": 4.17417,
+      "median_ns": 4.34892,
+      "max_ns": 5.88164,
+      "stdev_ns": 0.5316947229561757
+    }
+  },
+  "raw_batches": [
+    {
+      "repeat": "0",
+      "variant": "baseline",
+      "iterations": "10000000",
+      "seconds": "0.018880100",
+      "checksum": "3622306733"
+    },
+    {
+      "repeat": "0",
+      "variant": "masked",
+      "iterations": "10000000",
+      "seconds": "0.042752300",
+      "checksum": "3119958550"
+    },
+    {
+      "repeat": "1",
+      "variant": "masked",
+      "iterations": "10000000",
+      "seconds": "0.046130100",
+      "checksum": "3119958550"
+    },
+    {
+      "repeat": "1",
+      "variant": "baseline",
+      "iterations": "10000000",
+      "seconds": "0.019147700",
+      "checksum": "3622306733"
+    },
+    {
+      "repeat": "2",
+      "variant": "baseline",
+      "iterations": "10000000",
+      "seconds": "0.017973100",
+      "checksum": "3622306733"
+    },
+    {
+      "repeat": "2",
+      "variant": "masked",
+      "iterations": "10000000",
+      "seconds": "0.044046400",
+      "checksum": "3119958550"
+    },
+    {
+      "repeat": "3",
+      "variant": "masked",
+      "iterations": "10000000",
+      "seconds": "0.043489200",
+      "checksum": "3119958550"
+    },
+    {
+      "repeat": "3",
+      "variant": "baseline",
+      "iterations": "10000000",
+      "seconds": "0.018498600",
+      "checksum": "3622306733"
+    },
+    {
+      "repeat": "4",
+      "variant": "baseline",
+      "iterations": "10000000",
+      "seconds": "0.017969400",
+      "checksum": "3622306733"
+    },
+    {
+      "repeat": "4",
+      "variant": "masked",
+      "iterations": "10000000",
+      "seconds": "0.041890800",
+      "checksum": "3119958550"
+    },
+    {
+      "repeat": "5",
+      "variant": "masked",
+      "iterations": "10000000",
+      "seconds": "0.042366200",
+      "checksum": "3119958550"
+    },
+    {
+      "repeat": "5",
+      "variant": "baseline",
+      "iterations": "10000000",
+      "seconds": "0.018739700",
+      "checksum": "3622306733"
+    },
+    {
+      "repeat": "6",
+      "variant": "baseline",
+      "iterations": "10000000",
+      "seconds": "0.018466700",
+      "checksum": "3622306733"
+    },
+    {
+      "repeat": "6",
+      "variant": "masked",
+      "iterations": "10000000",
+      "seconds": "0.041741700",
+      "checksum": "3119958550"
+    },
+    {
+      "repeat": "7",
+      "variant": "masked",
+      "iterations": "10000000",
+      "seconds": "0.058816400",
+      "checksum": "3119958550"
+    },
+    {
+      "repeat": "7",
+      "variant": "baseline",
+      "iterations": "10000000",
+      "seconds": "0.026720200",
+      "checksum": "3622306733"
+    },
+    {
+      "repeat": "8",
+      "variant": "baseline",
+      "iterations": "10000000",
+      "seconds": "0.022136800",
+      "checksum": "3622306733"
+    },
+    {
+      "repeat": "8",
+      "variant": "masked",
+      "iterations": "10000000",
+      "seconds": "0.043225000",
+      "checksum": "3119958550"
+    },
+    {
+      "repeat": "9",
+      "variant": "masked",
+      "iterations": "10000000",
+      "seconds": "0.046156000",
+      "checksum": "3119958550"
+    },
+    {
+      "repeat": "9",
+      "variant": "baseline",
+      "iterations": "10000000",
+      "seconds": "0.019596300",
+      "checksum": "3622306733"
+    }
+  ],
+  "object_reports": {
+    "baseline.c": {
+      "stack_usage": "C:\\Users\\wongy\\ml-kem-side-channel\\src\\baseline.c:2:23:lab_mul\t8\tstatic\n",
+      "size": "   text\t   data\t    bss\t    dec\t    hex\tfilename\n    144\t      0\t      0\t    144\t     90\tC:\\Users\\wongy\\ml-kem-side-channel\\build\\baseline.o\n",
+      "nm": "0000000000000000 0000000000000004 r .xdata\n0000000000000000 000000000000000c p .pdata\n0000000000000000 0000000000000030 t .text\n0000000000000000 0000000000000030 T lab_mul\n0000000000000000 0000000000000050 r .rdata$zzz\n",
+      "objdump": "\nC:\\Users\\wongy\\ml-kem-side-channel\\build\\baseline.o:     file format pe-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <lab_mul>:\n   0:\t0f b7 c1             \tmovzwl %cx,%eax\n   3:\t0f b7 d2             \tmovzwl %dx,%edx\n   6:\t0f af c2             \timul   %edx,%eax\n   9:\t89 c1                \tmov    %eax,%ecx\n   b:\t89 c2                \tmov    %eax,%edx\n   d:\t48 69 c9 81 76 fb 3a \timul   $0x3afb7681,%rcx,%rcx\n  14:\t48 c1 e9 20          \tshr    $0x20,%rcx\n  18:\t29 ca                \tsub    %ecx,%edx\n  1a:\td1 ea                \tshr    $1,%edx\n  1c:\t01 ca                \tadd    %ecx,%edx\n  1e:\tc1 ea 0b             \tshr    $0xb,%edx\n  21:\t69 d2 01 0d 00 00    \timul   $0xd01,%edx,%edx\n  27:\t29 d0                \tsub    %edx,%eax\n  29:\tc3                   \tret\n  2a:\t90                   \tnop\n  2b:\t90                   \tnop\n  2c:\t90                   \tnop\n  2d:\t90                   \tnop\n  2e:\t90                   \tnop\n  2f:\t90                   \tnop\n"
+    },
+    "masked.c": {
+      "stack_usage": "C:\\Users\\wongy\\ml-kem-side-channel\\src\\masked.c:2:19:lab_masked_mul\t64\tstatic\n",
+      "size": "   text\t   data\t    bss\t    dec\t    hex\tfilename\n    168\t      0\t      0\t    168\t     a8\tC:\\Users\\wongy\\ml-kem-side-channel\\build\\masked.o\n",
+      "nm": "0000000000000000 000000000000000c p .pdata\n0000000000000000 000000000000000c r .xdata\n0000000000000000 0000000000000040 t .text\n0000000000000000 0000000000000040 T lab_masked_mul\n0000000000000000 0000000000000050 r .rdata$zzz\n",
+      "objdump": "\nC:\\Users\\wongy\\ml-kem-side-channel\\build\\masked.o:     file format pe-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <lab_masked_mul>:\n   0:\t57                   \tpush   %rdi\n   1:\t56                   \tpush   %rsi\n   2:\t53                   \tpush   %rbx\n   3:\t48 83 ec 20          \tsub    $0x20,%rsp\n   7:\t48 89 d7             \tmov    %rdx,%rdi\n   a:\t0f b7 f1             \tmovzwl %cx,%esi\n   d:\t0f b7 12             \tmovzwl (%rdx),%edx\n  10:\t4c 89 c3             \tmov    %r8,%rbx\n  13:\t89 f1                \tmov    %esi,%ecx\n  15:\te8 00 00 00 00       \tcall   1a <lab_masked_mul+0x1a>\n  1a:\t89 f1                \tmov    %esi,%ecx\n  1c:\t66 89 03             \tmov    %ax,(%rbx)\n  1f:\t0f b7 57 02          \tmovzwl 0x2(%rdi),%edx\n  23:\te8 00 00 00 00       \tcall   28 <lab_masked_mul+0x28>\n  28:\t66 89 43 02          \tmov    %ax,0x2(%rbx)\n  2c:\t48 83 c4 20          \tadd    $0x20,%rsp\n  30:\t5b                   \tpop    %rbx\n  31:\t5e                   \tpop    %rsi\n  32:\t5f                   \tpop    %rdi\n  33:\tc3                   \tret\n  34:\t90                   \tnop\n  35:\t90                   \tnop\n  36:\t90                   \tnop\n  37:\t90                   \tnop\n  38:\t90                   \tnop\n  39:\t90                   \tnop\n  3a:\t90                   \tnop\n  3b:\t90                   \tnop\n  3c:\t90                   \tnop\n  3d:\t90                   \tnop\n  3e:\t90                   \tnop\n  3f:\t90                   \tnop\n"
+    },
+    "kernel.c": {
+      "stack_usage": "C:\\Users\\wongy\\ml-kem-side-channel\\src\\kernel.c:4:6:lab_split\t8\tstatic\nC:\\Users\\wongy\\ml-kem-side-channel\\src\\kernel.c:8:10:lab_recombine\t8\tstatic\n",
+      "size": "   text\t   data\t    bss\t    dec\t    hex\tfilename\n    224\t      0\t      0\t    224\t     e0\tC:\\Users\\wongy\\ml-kem-side-channel\\build\\kernel.o\n",
+      "nm": "0000000000000000 0000000000000008 r .xdata\n0000000000000000 0000000000000018 p .pdata\n0000000000000040 0000000000000030 T lab_recombine\n0000000000000000 0000000000000040 T lab_split\n0000000000000000 0000000000000050 r .rdata$zzz\n0000000000000000 0000000000000070 t .text\n",
+      "objdump": "\nC:\\Users\\wongy\\ml-kem-side-channel\\build\\kernel.o:     file format pe-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <lab_split>:\n   0:\t0f b7 c9             \tmovzwl %cx,%ecx\n   3:\t66 41 89 10          \tmov    %dx,(%r8)\n   7:\t0f b7 d2             \tmovzwl %dx,%edx\n   a:\t81 c1 01 0d 00 00    \tadd    $0xd01,%ecx\n  10:\t29 d1                \tsub    %edx,%ecx\n  12:\t89 ca                \tmov    %ecx,%edx\n  14:\t89 c8                \tmov    %ecx,%eax\n  16:\t48 69 d2 81 76 fb 3a \timul   $0x3afb7681,%rdx,%rdx\n  1d:\t48 c1 ea 20          \tshr    $0x20,%rdx\n  21:\t29 d0                \tsub    %edx,%eax\n  23:\td1 e8                \tshr    $1,%eax\n  25:\t01 d0                \tadd    %edx,%eax\n  27:\tc1 e8 0b             \tshr    $0xb,%eax\n  2a:\t69 c0 01 0d 00 00    \timul   $0xd01,%eax,%eax\n  30:\t29 c1                \tsub    %eax,%ecx\n  32:\t66 41 89 48 02       \tmov    %cx,0x2(%r8)\n  37:\tc3                   \tret\n  38:\t0f 1f 84 00 00 00 00 \tnopl   0x0(%rax,%rax,1)\n  3f:\t00 \n\n0000000000000040 <lab_recombine>:\n  40:\t0f b7 01             \tmovzwl (%rcx),%eax\n  43:\t0f b7 51 02          \tmovzwl 0x2(%rcx),%edx\n  47:\t8d 0c 10             \tlea    (%rax,%rdx,1),%ecx\n  4a:\t48 89 c8             \tmov    %rcx,%rax\n  4d:\t48 69 c9 81 76 fb 3a \timul   $0x3afb7681,%rcx,%rcx\n  54:\t89 c2                \tmov    %eax,%edx\n  56:\t48 c1 e9 20          \tshr    $0x20,%rcx\n  5a:\t29 ca                \tsub    %ecx,%edx\n  5c:\td1 ea                \tshr    $1,%edx\n  5e:\t01 ca                \tadd    %ecx,%edx\n  60:\tc1 ea 0b             \tshr    $0xb,%edx\n  63:\t69 d2 01 0d 00 00    \timul   $0xd01,%edx,%edx\n  69:\t29 d0                \tsub    %edx,%eax\n  6b:\tc3                   \tret\n  6c:\t90                   \tnop\n  6d:\t90                   \tnop\n  6e:\t90                   \tnop\n  6f:\t90                   \tnop\n"
+    }
+  }
+}

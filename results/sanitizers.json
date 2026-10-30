@@ -1,0 +1,52 @@
+{
+  "address": {
+    "status": "PASS",
+    "kernel": "PASS: 11082241 scalar pairs; 11082241 share pairs; 119844 boundary triples",
+    "mlkem": {
+      "status": "PASS",
+      "nist_vectors": {
+        "keygen": 25,
+        "encapsulation": 25,
+        "decapsulation": 10,
+        "altered_ciphertext_shake_checks": 25
+      },
+      "smoke": "PASS: 100 OS-randomized roundtrips and altered ciphertexts",
+      "adapter_length_checks": 9,
+      "sources": {
+        "PQClean/PQClean": "0586a824fc0d49df0b6b6e9179d8d15d06d0974f",
+        "usnistgov/ACVP-Server": "975de31eb83d87039ec88934fdc47d8c312b892d"
+      },
+      "scope": "ML-KEM-512 core/KAT validation only, not FIPS certification. 20 key-validation cases not supported by upstream low-level API; 768/1024 not tested."
+    },
+    "host": {
+      "os": "Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+      "python": "3.10.12",
+      "compiler": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+    }
+  },
+  "undefined": {
+    "status": "PASS",
+    "kernel": "PASS: 11082241 scalar pairs; 11082241 share pairs; 119844 boundary triples",
+    "mlkem": {
+      "status": "PASS",
+      "nist_vectors": {
+        "keygen": 25,
+        "encapsulation": 25,
+        "decapsulation": 10,
+        "altered_ciphertext_shake_checks": 25
+      },
+      "smoke": "PASS: 100 OS-randomized roundtrips and altered ciphertexts",
+      "adapter_length_checks": 9,
+      "sources": {
+        "PQClean/PQClean": "0586a824fc0d49df0b6b6e9179d8d15d06d0974f",
+        "usnistgov/ACVP-Server": "975de31eb83d87039ec88934fdc47d8c312b892d"
+      },
+      "scope": "ML-KEM-512 core/KAT validation only, not FIPS certification. 20 key-validation cases not supported by upstream low-level API; 768/1024 not tested."
+    },
+    "host": {
+      "os": "Linux-5.15.146.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+      "python": "3.10.12",
+      "compiler": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+    }
+  }
+}

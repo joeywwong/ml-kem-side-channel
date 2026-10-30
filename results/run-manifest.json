@@ -1,0 +1,48 @@
+{
+  "generated_utc": "2026-10-29T18:04:47.506986+00:00",
+  "upstream": {
+    "PQClean/PQClean": "0586a824fc0d49df0b6b6e9179d8d15d06d0974f",
+    "usnistgov/ACVP-Server": "975de31eb83d87039ec88934fdc47d8c312b892d"
+  },
+  "original_code_sha256": {
+    "src/baseline.c": "5430b1d1416374e5eb0fa7fc1e1664cc86e7e7e2dc83bb2cbf4e4d1e5e98ff5e",
+    "src/kernel.c": "8b4e86e6694293d9c12209b83ff537ca3ba8f8efbcf0ed160ddcecd7537182ed",
+    "src/kernel.h": "f5e2d5a6bd6619cce6f8c4a93d6dad83da9e577cafaaace929b8cb4282ca27df",
+    "src/masked.c": "60ef005b1d1ef9ba79b05f37b951ab7512ea63888d2f9016ea7055af800e561e",
+    "scripts/attack_cpa.py": "974db522bc732456c06e67c858f2ffc2d28ae53bd89236fbc90c6c4de492c591",
+    "scripts/bench_host.py": "63e62a712f46939926b8935e958bad8186f7c2d2e5bbd2325df7eb3a3586a8f5",
+    "scripts/capture_nano.py": "b30b96ca3c8f3d2c42fefb19a0516235d02afc48f78d5fb4de06bcf83573f8a2",
+    "scripts/common.py": "06708bc3247c98da60b0ca0a52c96e1388925434002cc42be04b0dd97c79fc0f",
+    "scripts/doctor.py": "643196d06e5f01f9ae5583509f10f1ba7be47c086d5744e035d2ce0bb74c6d4b",
+    "scripts/evaluate_countermeasure.py": "15a63db75b3998cf1d16ace7bb3affc7a32130ca6f1200c53f94b92813b58d27",
+    "scripts/fetch_upstream.py": "5fce62bdeb8e81c8c3a49e37a6d34ac338ccbb990b121c6e4b8d8d40d7ed3550",
+    "scripts/host_mlkem.py": "e1c3dc4ff0371abec1719ae0f55433f55f39457ce0d7ee1f47d431aacb271133",
+    "scripts/plot_results.py": "4699f9c5269aabe43ba7b9402c6d3ab86a470bc84d87cbabb874226aea7fa7ed",
+    "scripts/sanitize.py": "ada695c9a96f40541630423bc53750582ecbcc713ee7d471687ff17f56a85592",
+    "scripts/simulate_leakage.py": "008eb7faf0b67ec9434e5c3b7e8a2d90c8d1d474680e2d7e65f3dc62657ccc39",
+    "tests/conftest.py": "dc1a6910268d224c83e6ff840f94b4506113ef6fa5de1f39f8b18afbbeaa19da",
+    "tests/test_cpa.py": "effe9b5a78f50ef17351e416cb8f18f4d203652688763e6efc708243c5d5570f",
+    "tests/test_masked_equivalence.py": "8c9505a4d8cf9c2945b542e5081e7e1760f4435f25a17d89ebfd523f2ad8a305",
+    "tests/test_reference_compatibility.py": "bce0b36bd075dd9effac92ab280e9b9fb6e20390080a5c52a456637ba3ff8873",
+    "tests/test_simulation.py": "91c58ae7ab46ff7ed5aae1054d94ce91f8adcf5de4878bcfddca4c18e3a69fa5",
+    "tests/bench_kernel.c": "3b458f7b62682372aa4e69a4e1369c1d258cf332efd446befbeb1358f30c5952",
+    "tests/mlkem_driver.c": "417216e6e9296a5d1e7a09be23831d610284489ee6ebe7a8fa024e87453bcb5e",
+    "tests/test_kernel.c": "100f30218206faaaebb4c12b82f7674671b1886155041bde958d5bb9a0f38f09",
+    "tasks.py": "fc30c0962cc03d924b757ff2e0955fcc9f256bf2a8dac73ec90d9d5f723d084a",
+    "requirements.txt": "cd98a6a1c013bbc9da6e5d5b880fe02bdb374d19492f5cec2486860ec1f27230",
+    "requirements-lock-windows.txt": "c707b6bb5c3e4d8d9e22086f4ba1dd5e48b1abc675cc6f075ac68ba3716b19f9",
+    "Makefile": "6ea2037c06b29f266222f6f4f45b69398b92ef55b4cd5a0a1345cfac37649b84",
+    "upstream-lock.json": "ca3780f19fe4723e3e4968f52c4a2d8e8f4b4c628645d655615b8c625a9288c1"
+  },
+  "result_sha256": {
+    "benchmark.json": "061e94f3ba7cec03772e24a8299a448678b4a03ccfc5224a2f41bf4e1f4ff988",
+    "environment.json": "4b04348c775fc2ffffda61a8814638289a4e1dbb6c35464538b8dafb87d6fa53",
+    "host-mlkem.json": "2e0e47c3b35addce56a1586fe10075a592fd15d934c926214b84b7b96c8bafdb",
+    "sanitizers-linux.json": "0087748fd32f588bf4637b691ea0468990739acd4de550486bc39575fecbc57b",
+    "sanitizers-windows.json": "1f1f7e42a229ec5db4e70b3690d7fe0078c12639c99edb90cbfc183bc2cbf03b",
+    "sanitizers.json": "0087748fd32f588bf4637b691ea0468990739acd4de550486bc39575fecbc57b",
+    "simulation.json": "c1c8e2880fd0539699efc66f310ef306ede7c4d2f79e9473617026082f24431a",
+    "tests.json": "6ad4a024ea87e7d0910df698c626bf831bdf211bc7d816dc95148e239ddac4af",
+    "wsl-environment.json": "880c6772b30a1239ad5c16f8398f9ce805f237fb83a341f53b792042f8a07fa5"
+  }
+}
