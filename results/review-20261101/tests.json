@@ -1,0 +1,8 @@
+{
+  "command": "python -m pytest -q",
+  "status": "PASS",
+  "passed": 9,
+  "failed": 0,
+  "reported_seconds": 4.98,
+  "scope": "six existing tests plus three synthetic/mock screen/pilot tests; no hardware"
+}

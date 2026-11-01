@@ -1,4 +1,4 @@
-"""D4 guard, not a capture implementation. Hardware is not available yet."""
+"""Legacy D4 guard. External target interface is unverified; no device opened."""
 import argparse
 import importlib.metadata
 import json
@@ -14,8 +14,8 @@ def main():
     if not 1<=args.samples<=50000 or args.traces<1: p.error('invalid Nano sample/trace count')
     try: version=importlib.metadata.version('chipwhisperer')
     except importlib.metadata.PackageNotFoundError: version='NOT INSTALLED'
-    print(json.dumps({'status':'NOT RUN (NO HARDWARE)','chipwhisperer':version,
-        'reason':'D4 deferred: actual revision, stock sanity capture, firmware and explicit flashing authorization required. No device opened.'}))
+    print(json.dumps({'status':'BLOCKED: EXTERNAL MEASUREMENT INTERFACE','chipwhisperer':version,
+        'reason':'Nano onboard AES acquisition verified separately on 2026-11-01. ML-KEM needs reviewed analog wiring, GPIO trigger and target transport adapter. See docs/pqc_hardware_feasibility.md and scripts/pilot_capture.py. No device opened.'}))
     if not args.inspect_only: raise SystemExit(2)
 
 

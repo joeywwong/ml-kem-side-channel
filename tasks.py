@@ -26,9 +26,7 @@ def task(name):
         print(p.stdout,flush=True)
         save('tests.json',{'status':'PASS','c':output,'python':p.stdout.strip()})
     elif name=='stm32-build':
-        import shutil
-        reason='arm-none-eabi-gcc unavailable' if not shutil.which('arm-none-eabi-gcc') else 'board revision, flash capacity, startup and linker layout unverified'
-        print('BLOCKED: '+reason+'; no firmware built or flashed')
+        print('Firmware is maintained in sibling ml-kem-m4: use validation/scripts/prepare_leakage_probe.py for build-only preparation. This guard performs no build or flashing. External capture still requires the hardware feasibility gate.')
         raise SystemExit(2)
     elif name=='all':
         for item in ['doctor','test','host-mlkem','sanitize','simulate','attack-sim','bench','report']: task(item)

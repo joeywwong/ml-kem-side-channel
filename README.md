@@ -7,6 +7,18 @@ surrogate** for studying leakage, correlation power analysis (CPA), and additive
 **All side-channel traces are synthetic. No physical attack, full ML-KEM key
 recovery, or secure masking implementation has been demonstrated.**
 
+**2026-11-01 continuation:** the statement above describes this repository's
+ML-KEM experiments. The separate AES repository now has five fresh physical
+random-key captures. The supporting [ml-kem-m4](../ml-kem-m4/README.md)
+repository already contains historical STM32 functional validation and now has
+a host-tested, cross-compiled basemul instrumentation preparation. Its new hooks
+are RAM markers, not GPIO triggers. No physical ML-KEM traces exist here.
+See [current roadmap](docs/notes/experiment_roadmap.md),
+[hardware feasibility](docs/pqc_hardware_feasibility.md), and
+[three-pass firmware/pipeline notes](docs/notes/05_mlkem_firmware_and_leakage.md).
+The historical D5 statements below refer to this repository alone; firmware
+development now belongs in `ml-kem-m4` and should not be duplicated here.
+
 See [executed results](docs/RESULTS.md), [research design](docs/RESEARCH_DESIGN.md),
 [progress](docs/PROGRESS.md), and [limitations](docs/LIMITATIONS.md).
 
