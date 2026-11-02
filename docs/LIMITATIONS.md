@@ -18,13 +18,16 @@
   succeeded: its sole `host` job ran `test`, `host-mlkem`,
   `sanitize`, a sanitizer-PASS assertion, and `attack-sim` on Ubuntu 24.04 /
   Python 3.13.17. It did not run benchmarking, report generation, or hardware tasks.
-- **NOT RUN:** MCU cycles, heap/stack high-water measurement, power, flash/RAM
-  identification, hardware revisions and Nano firmware. No hardware availability
-  inferred from a failed USB query. Host timings include operating-system noise.
-- **Unfinished hardware stages:** D4 has no implemented Nano firmware/serial/capture
-  pipeline; D5 has no board-specific STM32F407 firmware build or external capture
-  pipeline. Toolchain, startup/linker integration, board identification, and a safe
-  analog interface remain outstanding. Guard commands do not implement these paths.
+- **NOT RUN in this repository:** MCU cycles, heap/stack high-water measurement,
+  power capture, hardware-revision identification and Nano ML-KEM firmware.
+  The earlier failed USB query did not establish hardware availability; the
+  sibling AES repository later captured physical Nano traces. Host timings
+  include operating-system noise.
+- **Unfinished physical stages:** D4 has no implemented Nano ML-KEM
+  firmware/serial/capture pipeline. The sibling `ml-kem-m4` repository has a
+  functional STM32F407 firmware build, board validation and an ARM cross-compiled
+  instrumentation preparation. D5 external power capture still lacks a verified
+  safe analog interface. Guard commands do not implement these paths.
 - Scalar `% 3329` canonical encoding differs from signed/lazy Montgomery basemul;
   mathematical conversion checks do not establish matching physical leakage.
 - First-order HW at isolated output instants is deliberately limited. The shares

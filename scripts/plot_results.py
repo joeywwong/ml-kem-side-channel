@@ -90,8 +90,8 @@ def main():
         '| D1 | PASS (host scope) | 25 keygen + 25 encapsulation + 10 decapsulation NIST KATs; 100 random round trips |',
         '| D2 | SIMULATED | Exhaustive scalar tests; positive and negative CPA controls |',
         '| D3 | SIMULATED | Sharing equivalence, multi-seed evaluation, recombination failure; host timing measured |',
-        '| D4 | NOT RUN (NO HARDWARE) | Nano firmware/serial/capture pipeline unimplemented |',
-        '| D5 | BLOCKED / unfinished | No board-specific firmware build or external capture pipeline; toolchain/board integration and safe analog interface outstanding |','',
+        '| D4 | NOT RUN | Nano ML-KEM firmware/serial/capture pipeline unimplemented in this repository |',
+        '| D5 | Physical capture NOT RUN | Sibling `ml-kem-m4` has functional board validation and an ARM cross-build; safe analog measurement interface remains unverified |','',
         '## Correctness and toolchain','',tests['c'],'',tests['python'],'',
         'NIST byte-for-byte vectors are independent of the implementation. Also checked 25 deterministic round trips and altered ciphertext rejection against Python SHAKE-256, plus 9 adapter length rejections. The upstream low-level API does not expose the 20 key-validation cases; those are not claimed tested. No FIPS certification.', '',
         'Sanitizers (latest run): '+sanitizer_text+'. See [diagnostics and host](../results/sanitizers.json). Platform-specific snapshots retain other executed environments.', '',
@@ -117,11 +117,11 @@ def main():
         '## Reproduce','', '```powershell','python tasks.py all','```','',
         'Or run `doctor`, `test`, `host-mlkem`, `sanitize`, `simulate`, `attack-sim`, `bench`, then `report` separately. `make` forwards to the same runner where available. Exact source/vector hashes are in [upstream-lock.json](../upstream-lock.json); original-code hashes in [run-manifest.json](../results/run-manifest.json).', '',
         '## Hosted CI evidence','',CI_EVIDENCE,'',
-        'No hardware capture, MCU execution, or firmware implementation is demonstrated. D4 firmware/capture and D5 board-specific firmware/external capture remain unfinished.']
+        'No ML-KEM power capture is demonstrated in this repository. The sibling AES repository has Nano captures, and `ml-kem-m4` has functional STM32F407 execution plus an ARM cross-compiled instrumentation build. D4 Nano ML-KEM capture and D5 external power capture remain unfinished.']
     (ROOT/'docs/RESULTS.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     progress=['# Project progress','',
         '## Aim','',
-        'Build a reproducible leakage → attack → countermeasure → evaluation lab before the Nano arrives, while keeping full ML-KEM correctness separate from scalar leakage demonstrations.', '',
+        'Build a reproducible leakage → attack → countermeasure → evaluation lab, using the available Nano AES baseline and sibling STM32F407 firmware evidence while keeping full ML-KEM correctness separate from scalar leakage demonstrations.', '',
         '## What is implemented','',
         '- [Pinned ML-KEM host adapter](../tests/mlkem_driver.c) and [NIST vector runner](../scripts/host_mlkem.py); unmodified upstream sources and hashes.',
         '- [Scalar multiplication](../src/baseline.c), [share setup](../src/kernel.c), [shared multiplication](../src/masked.c), exhaustive C and independent Python checks.',
@@ -136,11 +136,11 @@ def main():
         '![SIMULATED comparison, three fixed seeds](../results/figures/comparison.png)','',
         '## Scientific limitations','',
         'All leakage is SIMULATED. This is one coefficient under a stated HW model, not a full-key ML-KEM attack or secure masking construction. Real Montgomery encoding, transition/higher-order leakage, setup and recombination can change the outcome. NIST key-validation cases are outside the selected low-level API; no FIPS certification. The USENIX paper uses STM32F3 for Kyber and STM32F4 for ASCON.', '',
-        'Latest local sanitizer results: '+sanitizer_text+'. Passing runs cover the exhaustive kernel and full ML-KEM adapter/KAT tests. Platform diagnostics are preserved. The initial sandbox denied WSL and USB enumeration; an authorized follow-up reached Ubuntu. ARM compiler was absent from PATH in the inspected Windows/WSL environments. D4 firmware/capture is unimplemented and NOT RUN (NO HARDWARE); D5 board-specific firmware/external capture is unfinished and BLOCKED on toolchain/board integration and a verified safe analog interface.', '',
+        'Latest local sanitizer results: '+sanitizer_text+'. Passing runs cover the exhaustive kernel and full ML-KEM adapter/KAT tests. Platform diagnostics are preserved. The initial sandbox denied WSL and USB enumeration; an authorized follow-up reached Ubuntu. That preflight did not find an ARM compiler on PATH; the sibling `ml-kem-m4` repository later used ARM GCC 14.3.1 for a Cortex-M4 build and functional board validation. The Nano ML-KEM firmware/capture pipeline in this repository is unimplemented and NOT RUN. External power capture still requires a verified safe analog interface.', '',
         '## Hosted CI evidence','',CI_EVIDENCE,'',
-        '## Next steps when Nano arrives','',
-        'Identify the actual PCB/firmware, then run the stock onboard sanity capture before porting only the small kernel. Keep the built-in target intact. Verify F407 markings/flash registers before choosing a linker map; no external wiring proposal until both schematics/revisions are known.', '',
-        '**Highest-value next step:** when Nano arrives, identify its actual revision and complete the stock onboard sanity capture before attempting the scalar experiment.']
+        '## Next steps for Nano ML-KEM capture','',
+        'Identify the Nano PCB/firmware revision and use the completed stock AES capture as a baseline before porting the small kernel. Keep the built-in target intact. The sibling F407 build and board tests are complete within their documented scope; external power measurement needs a verified safe analog interface.', '',
+        '**Highest-value next step:** identify the Nano revision and implement a bounded scalar experiment, then validate it against the existing stock AES capture baseline.']
     (ROOT/'docs/PROGRESS.md').write_text('\n'.join(progress)+'\n',encoding='utf-8')
     paths=[*sorted((ROOT/'src').glob('*.[ch]')),*sorted((ROOT/'scripts').glob('*.py')),
            *sorted((ROOT/'tests').glob('*.py')),*sorted((ROOT/'tests').glob('*.c')),

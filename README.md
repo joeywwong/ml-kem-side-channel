@@ -13,11 +13,8 @@ random-key captures. The supporting [ml-kem-m4](../ml-kem-m4/README.md)
 repository already contains historical STM32 functional validation and now has
 a host-tested, cross-compiled basemul instrumentation preparation. Its new hooks
 are RAM markers, not GPIO triggers. No physical ML-KEM traces exist here.
-See [current roadmap](docs/notes/experiment_roadmap.md),
-[hardware feasibility](docs/pqc_hardware_feasibility.md), and
-[three-pass firmware/pipeline notes](docs/notes/05_mlkem_firmware_and_leakage.md).
-The historical D5 statements below refer to this repository alone; firmware
-development now belongs in `ml-kem-m4` and should not be duplicated here.
+STM32F407 firmware development is maintained in the sibling `ml-kem-m4`
+repository.
 
 See [executed results](docs/RESULTS.md), [research design](docs/RESEARCH_DESIGN.md),
 [progress](docs/PROGRESS.md), and [limitations](docs/LIMITATIONS.md).
@@ -115,13 +112,15 @@ paper-replication claim. See the [threat model](docs/THREAT_MODEL.md) and
 | D1: ML-KEM software baseline | PASS, host scope | NIST vectors, round trips, implicit rejection; Linux ASan/UBSan |
 | D2: Scalar arithmetic and CPA | SIMULATED | C correctness and synthetic traces/controls |
 | D3: Sharing and evaluation | SIMULATED; host cost measured | Functional shares, paired comparison, recombination failure |
-| D4: Nano onboard capture | NOT RUN (NO HARDWARE) | Firmware, serial protocol, and capture pipeline are not implemented |
-| D5: STM32F407 firmware / external capture | BLOCKED / unfinished | No board-specific firmware build; toolchain, startup/linker integration, board identification, and safe external analog interface outstanding |
+| D4: Nano ML-KEM onboard capture | NOT RUN | Firmware, serial protocol, and capture pipeline are not implemented in this repository |
+| D5: STM32F407 / external capture | Physical capture NOT RUN | Sibling `ml-kem-m4` has functional board validation and an ARM cross-compiled instrumentation build; the safe analog measurement interface is unverified |
 
-Next: identify the Nano revision, complete a stock onboard sanity capture, then
-port only the isolated kernel and inspect its ARM assembly. Full-scheme F407
-firmware is a separate task. Nano-to-F407 capture feasibility is unverified;
-see the [hardware checklist](docs/HARDWARE_SETUP_CHECKLIST.md).
+Next: identify the Nano revision, use the completed stock AES capture as the
+hardware baseline, then implement the isolated kernel and inspect its ARM
+assembly. The sibling `ml-kem-m4` repository has STM32F407 functional firmware
+and a cross-compiled instrumentation build. Nano-to-F407 physical capture still
+requires a verified safe analog interface; see the
+[hardware checklist](docs/HARDWARE_SETUP_CHECKLIST.md).
 
 ## Reproduce the host work
 

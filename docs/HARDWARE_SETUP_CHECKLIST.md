@@ -1,14 +1,15 @@
-# Deferred hardware checklist — D4/D5 NOT RUN
+# Deferred physical capture checklist — D4/D5 power capture not run
 
-The Nano is not available. No board has been opened or flashed by these scripts.
+The Nano has been used for stock onboard AES captures in the sibling AES repository. These scripts have not opened, reset, or flashed a board.
 `capture_nano.py` is an explicit D4 guard, not an implemented capture pipeline.
 
-When the Nano arrives:
+Before Nano ML-KEM capture:
 
 1. Inspect actual PCB revision and MCU markings; compare official hardware docs.
    Identify library/firmware version and USB connectivity without updating firmware.
    Keep serial identifiers in local-only metadata.
-2. Run a stock NewAE Nano sanity capture and preserve raw data/configuration.
+2. Review the recorded stock NewAE Nano AES capture as a baseline; repeat a
+   sanity capture if the hardware or firmware configuration has changed.
    Verify trigger, clipping, alignment, repeatability and disconnect handling.
 3. Build only the scalar target for the verified F030: nominal 16 KB flash,
    4 KB RAM. Verify map and stack budget. Implement a bounded serial protocol and
@@ -21,9 +22,10 @@ When the Nano arrives:
 
 For F407 software testing: read physical marking and flash-size register, record
 board revision and device ID, verify accessible RAM regions and linker allocation.
-The previously reported 0x413 ID does not resolve VET6/VGT6 flash size. Use the
-Discovery board's startup, clock, UART and ST-LINK configuration. Require explicit
-connected-board execution request before running KATs/DWT timing.
+The sibling `ml-kem-m4` repository records a 0x413 device ID, a 1 MiB flash-size
+register, a successful ARM build, and functional board validation. The physical
+VE/VG marking remains unresolved. External power capture still needs a verified
+safe analog interface.
 
 **BLOCKED: safe external measurement interface not yet verified.** Nano normally
 measures its integrated target. Before an F407 capture, obtain both exact revision

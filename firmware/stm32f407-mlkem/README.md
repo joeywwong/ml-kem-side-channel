@@ -1,9 +1,8 @@
-# BLOCKED — toolchain and actual MCU memory unverified
+# External capture blocked — safe analog interface unverified
 
-Neither Windows nor the inspected WSL Ubuntu has `arm-none-eabi-gcc` on PATH.
-No firmware was built. No guessed 1 MB linker script is provided: the physical
-marking, flash-size register and Discovery board revision must be verified first.
-Then integrate the pinned full ML-KEM baseline with Discovery-specific startup,
-clock, UART and a verified linker map. Record map/stack/RAM, execute KATs only on
-explicit request, and gather DWT repeat/min/median/dispersion with clock metadata.
-`python tasks.py stm32-build` fails clearly until that integration is completed.
+No firmware is built in this repository. The sibling `ml-kem-m4` repository used
+ARM GCC 14.3.1 to build STM32F407 firmware and completed functional board
+validation with a verified linker map. Its later basemul instrumentation build
+was tested on the host and cross-compiled but not flashed. The physical VE/VG
+marking is still unresolved; no external power-capture interface is verified.
+`python tasks.py stm32-build` remains a guard in this repository.

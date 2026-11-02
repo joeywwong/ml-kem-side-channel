@@ -51,7 +51,7 @@ def main():
         'os':platform.platform(),'cpu':cpu,'logical_cpus':os.cpu_count(),'physical_memory_bytes':memory,
         'python':platform.python_version(),'tools':tools,'packages':packages,'usb_enumeration':usb,
         'wsl':probe(['wsl','--list','--quiet']) if shutil.which('wsl') else {'status':'NOT RUN'},
-        'hardware':{'nano':'NOT RUN (NO HARDWARE), user states not available',
+        'hardware':{'nano':'NOT RUN: Nano ML-KEM firmware/capture pipeline not implemented in this repository',
                     'stm32f407':'NOT RUN: no on-device authorization or identification',
                     'board_revision':'UNKNOWN','verified_flash':'UNKNOWN','verified_ram':'UNKNOWN'}}
     save('environment.json',result)

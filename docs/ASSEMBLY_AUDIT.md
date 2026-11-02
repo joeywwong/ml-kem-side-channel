@@ -35,8 +35,10 @@ including ABI effects, not measured maximum whole-call-chain stack. No heap is
 allocated by the scalar functions. Benchmark static arrays and C runtime costs
 are not included in those scalar object numbers.
 
-No ARM code was generated: the cross-compiler is unavailable and no MCU memory
-map is verified. F030 lowering of `%` may involve a software divide helper;
+No ARM code was generated in this repository's scalar audit. The sibling
+`ml-kem-m4` repository has since used ARM GCC 14.3.1 for an STM32F407 build and
+cross-compiled basemul instrumentation; the Nano F030 scalar target remains
+uncompiled. F030 lowering of `%` may involve a software divide helper;
 that must be inspected after compiling the actual target. Host assembly does
 not predict ARM timing or leakage. The reuse of registers across share calls
 is itself a potential transition-leakage problem excluded by the simple model.

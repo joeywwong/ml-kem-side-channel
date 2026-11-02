@@ -15,7 +15,7 @@ def main():
     try: version=importlib.metadata.version('chipwhisperer')
     except importlib.metadata.PackageNotFoundError: version='NOT INSTALLED'
     print(json.dumps({'status':'BLOCKED: EXTERNAL MEASUREMENT INTERFACE','chipwhisperer':version,
-        'reason':'Nano onboard AES acquisition verified separately on 2026-11-01. ML-KEM needs reviewed analog wiring, GPIO trigger and target transport adapter. See docs/pqc_hardware_feasibility.md and scripts/pilot_capture.py. No device opened.'}))
+        'reason':'Nano onboard AES acquisition verified separately on 2026-11-01. ML-KEM needs reviewed analog wiring, GPIO trigger and target transport adapter. See docs/HARDWARE_SETUP_CHECKLIST.md. No device opened.'}))
     if not args.inspect_only: raise SystemExit(2)
 
 

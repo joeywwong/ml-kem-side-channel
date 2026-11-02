@@ -1,4 +1,4 @@
-# NOT RUN — no Nano available
+# NOT RUN — Nano ML-KEM target not implemented
 
 No firmware image, linker script, serial implementation or capture support is
 claimed. Future target contains only `src/kernel.*`, `baseline.c`, `masked.c`,
